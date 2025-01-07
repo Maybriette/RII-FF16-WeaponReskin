@@ -36,12 +36,11 @@ public class Mod : ModBase
             // Get the chosen sword and its string value
             Sword chosenSword = _configuration.SelectedSword;
             string swordStringValue = SwordStringMappings[chosenSword];
-            _logger.WriteLine($"[{_modConfig.ModId}] Mapped sword value: {swordStringValue}");
 
-            // Get the chosen skin and its string value
+            // Get the chosen skin and its path information
             Skin chosenSkin = _configuration.SelectedSkin;
-            string skinStringValue = SkinStringMappings[chosenSkin];
-            _logger.WriteLine($"[{_modConfig.ModId}] Mapped skin value: {skinStringValue}");
+            string skinPackNum = SkinStringMappings[chosenSkin].PackNum;
+            string skinModelPath = SkinStringMappings[chosenSkin].ModelPath;
 
             // Fetch IFF16ModPackManager to add files
             var controller = _modLoader.GetController<IFF16ModPackManager>();
@@ -65,9 +64,7 @@ public class Mod : ModBase
 
             // Generate correct file paths 
             string targetSwordFile = $"chara/c8001/model/body/{swordStringValue}/body.mdl";
-            string targetSkinFile = $"chara/c8001/model/body/{skinStringValue}/body.mdl";
-
-            _logger.WriteLine($"[{_modConfig.ModId}] Attempting to load skin file: {targetSkinFile}");
+            string targetSkinFile = $"chara/{skinPackNum}/model/body/{skinModelPath}/body.mdl";
 
             if (!modPackManager.FileExists(targetSkinFile))
             {
@@ -77,11 +74,20 @@ public class Mod : ModBase
 
             // Load chosen skin
             var skinFileData = modPackManager.GetFileData(targetSkinFile);
-            _logger.WriteLine($"[{_modConfig.ModId}] Successfully loaded skin file. Size: {skinFileData.Length} bytes");
 
             // Overwrite the chosen sword model file with the loaded skin file 
             modPackManager.AddModdedFile(_modConfig.ModId, targetSwordFile, skinFileData);
-            _logger.WriteLine($"[{_modConfig.ModId}] Successfully applied skin to target sword file: {targetSwordFile}");
+            _logger.WriteLine($"[{_modConfig.ModId}] Successfully applied skin to target sword file.");
+
+            // Overwrite Odin's blades with the loaded skin file if user has chosen that
+            if (_configuration.ReskinOdin is true)
+            {
+                string odinFeatFile1 = $"chara/c1804/model/body/b0001/body.mdl";
+                string odinFeatFile2 = $"chara/c1804/model/body/b0002/body.mdl";
+
+                modPackManager.AddModdedFile(_modConfig.ModId, odinFeatFile1, skinFileData);
+                modPackManager.AddModdedFile(_modConfig.ModId, odinFeatFile2, skinFileData);
+            }
         }
         catch (Exception ex)
         {

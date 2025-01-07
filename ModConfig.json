@@ -2,10 +2,10 @@
   "ModId": "ff16.skins.clivesswords",
   "ModName": "FFXVI Reskin Clive\u0027s Sword",
   "ModAuthor": "Maybri",
-  "ModVersion": "2.0.0",
-  "ModDescription": "\u2022\u2022 Please use the \u0022Configure Mod\u0022 button for settings. \u2022\u2022  Reskin one of Clive\u0027s swords.  You can use the appearance of swords that you haven\u0027t obtained yet in the game.  Works even without Arete Stone appearance option unlocked. ",
+  "ModVersion": "2.2.0",
+  "ModDescription": "\u2022\u2022 Please use the \u0022Configure Mod\u0022 button for settings. \u2022\u2022  Reskin one of Clive\u0027s swords.  You can use the appearance of weapons that Clive hasn\u0027t or can never obtain.  Works even without Arete Stone appearance option unlocked.",
   "ModDll": "ff16.skins.clivesswords.dll",
-  "ModIcon": "Preview.png",
+  "ModIcon": "OriginalSin.jpg",
   "ModR2RManagedDll32": "x86/ff16.skins.clivesswords.dll",
   "ModR2RManagedDll64": "x64/ff16.skins.clivesswords.dll",
   "ModNativeDll32": "",
@@ -20,15 +20,6 @@
   "PluginData": {
     "GitHubDependencies": {
       "IdToConfigMap": {
-        "reloaded.sharedlib.hooks": {
-          "Config": {
-            "UserName": "Sewer56",
-            "RepositoryName": "Reloaded.SharedLib.Hooks.ReloadedII",
-            "UseReleaseTag": true,
-            "AssetFileName": "reloaded.sharedlib.hooks.zip"
-          },
-          "ReleaseMetadataName": "Sewer56.Update.ReleaseMetadata.json"
-        },
         "ff16.utility.modloader": {
           "Config": {
             "UserName": "Nenkai",
@@ -37,6 +28,15 @@
             "AssetFileName": "Mod.zip"
           },
           "ReleaseMetadataName": "ff16.utility.modloader.ReleaseMetadata.json"
+        },
+        "reloaded.sharedlib.hooks": {
+          "Config": {
+            "UserName": "Sewer56",
+            "RepositoryName": "Reloaded.SharedLib.Hooks.ReloadedII",
+            "UseReleaseTag": true,
+            "AssetFileName": "reloaded.sharedlib.hooks.zip"
+          },
+          "ReleaseMetadataName": "Sewer56.Update.ReleaseMetadata.json"
         }
       }
     }
