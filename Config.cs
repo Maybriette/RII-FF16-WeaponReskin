@@ -49,6 +49,7 @@ public class Config : Configurable<Config>
 
     public static readonly Dictionary<Skin, SkinFileInfo> SkinStringMappings = new()
     {
+        { (Skin.HolyMoonlight), new SkinFileInfo { PackNum = "External", ModelPath = "External" } },
         { (Skin.Invictus), new SkinFileInfo { PackNum = "c8001", ModelPath = "b0001" } },
         { (Skin.Defender), new SkinFileInfo { PackNum = "c8001", ModelPath = "b0013" } },
         { (Skin.Excalibur), new SkinFileInfo { PackNum = "c8001", ModelPath = "b0014" } },
@@ -125,12 +126,13 @@ public class Config : Configurable<Config>
     }
 
     [DisplayName("Skin to Apply")]
-    [Description("Choose which sword skin you wish to apply.")]
-    [DefaultValue(Skin.UltimaWeapon)]
-    public Skin SelectedSkin { get; set; } = Skin.UltimaWeapon;
+    [Description("Choose which weapon skin you wish to apply.")]
+    [DefaultValue(Skin.HolyMoonlight)]
+    public Skin SelectedSkin { get; set; } = Skin.HolyMoonlight;
 
     public enum Skin
     {
+        HolyMoonlight,
         Invictus,
         Defender,     
         Excalibur,
