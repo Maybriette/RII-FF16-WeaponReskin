@@ -1,7 +1,7 @@
 ﻿using Reloaded.Mod.Interfaces;
-using ff16.skins.clivesswords.Configuration;
+using ff16.skins.clivesweapon.Configuration;
 
-namespace ff16.skins.clivesswords.Template.Configuration;
+namespace ff16.skins.clivesweapon.Template.Configuration;
 
 /// <summary>
 /// Creates the various different configurations used by the mod.

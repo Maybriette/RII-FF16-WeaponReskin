@@ -1,13 +1,13 @@
 ﻿using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
-using ff16.skins.clivesswords.Template;
-using ff16.skins.clivesswords.Configuration;
+using ff16.skins.clivesweapon.Template;
+using ff16.skins.clivesweapon.Configuration;
 using ff16.utility.modloader.Interfaces;
 using System;
-using static ff16.skins.clivesswords.Configuration.Config;
+using static ff16.skins.clivesweapon.Configuration.Config;
 using System.IO;
 
-namespace ff16.skins.clivesswords;
+namespace ff16.skins.clivesweapon;
 
 public class Mod : ModBase
 {
@@ -27,7 +27,7 @@ public class Mod : ModBase
     // Dictionary containing hardcoded external paths for specific weapon skins
     private static readonly Dictionary<Skin, List<ModFileInfo>> ExternalFiles = new()
     {
-        { (Skin.HolyMoonlight), new List<ModFileInfo>
+        { (Skin.Holy_Moonlight), new List<ModFileInfo>
             {
                 new ModFileInfo
                 {
@@ -267,7 +267,7 @@ public class Mod : ModBase
                         // Write the file to the game
                         modPackManager.AddModdedFile(_modConfig.ModId, gameFilePath, fileData);
                         // Debug line below this, remove before publishing
-                        _logger.WriteLine($"[{_modConfig.ModId}] DEBUG: Successfully loaded Mod file from {fileInfo.OriginPath} into {fileInfo.TargetPath}", _logger.ColorLightBlue);
+                        // _logger.WriteLine($"[{_modConfig.ModId}] DEBUG: Successfully loaded Mod file from {fileInfo.OriginPath} into {fileInfo.TargetPath}", _logger.ColorLightBlue);
                     }
                     catch (Exception ex)
                     {
@@ -285,7 +285,7 @@ public class Mod : ModBase
                 modPackManager.AddModdedFile(_modConfig.ModId, targetSwordFile, skinFileData);
                 _logger.WriteLine($"[{_modConfig.ModId}] Successfully applied skin to target sword file.");
                 // Debug line below this, remove before publishing
-                _logger.WriteLine($"[{_modConfig.ModId}] DEBUG: Successfully loaded Mod file from {skinMdlPath} into {targetSwordFile}", _logger.ColorLightBlue);
+                // _logger.WriteLine($"[{_modConfig.ModId}] DEBUG: Successfully loaded Mod file from {skinMdlPath} into {targetSwordFile}", _logger.ColorLightBlue);
 
                 // Overwrite Odin's blades with the loaded skin file if user has chosen that
                 if (_configuration.ReskinOdin is true)

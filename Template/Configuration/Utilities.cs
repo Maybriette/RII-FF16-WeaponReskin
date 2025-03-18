@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace ff16.skins.clivesswords.Template.Configuration;
+namespace ff16.skins.clivesweapon.Template.Configuration;
 
 public class Utilities
 {

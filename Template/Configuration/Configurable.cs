@@ -3,7 +3,7 @@ using System.ComponentModel;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace ff16.skins.clivesswords.Template.Configuration;
+namespace ff16.skins.clivesweapon.Template.Configuration;
 
 public class Configurable<TParentType> : IUpdatableConfigurable where TParentType : Configurable<TParentType>, new()
 {
