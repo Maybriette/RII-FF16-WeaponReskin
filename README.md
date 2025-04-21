@@ -1,4 +1,4 @@
-# RII-FF16-ReskinClivesWeapon
+# RII-FF16-WeaponReskin
 
 Mod for Final Fantasy XVI on PC using Reloaded II
 
