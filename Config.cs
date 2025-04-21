@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
-using ff16.skins.clivesweapon.Template.Configuration;
+using ff16.skins.weapon.Template.Configuration;
 using Reloaded.Mod.Interfaces.Structs;
 
-namespace ff16.skins.clivesweapon.Configuration;
+namespace ff16.skins.weapon.Configuration;
 
 public class Config : Configurable<Config>
 {

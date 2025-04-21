@@ -6,10 +6,10 @@
 using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
 using Reloaded.Mod.Interfaces.Internal;
-using ff16.skins.clivesweapon.Template.Configuration;
-using ff16.skins.clivesweapon.Configuration;
+using ff16.skins.weapon.Template.Configuration;
+using ff16.skins.weapon.Configuration;
 
-namespace ff16.skins.clivesweapon.Template;
+namespace ff16.skins.weapon.Template;
 
 public class Startup : IMod
 {

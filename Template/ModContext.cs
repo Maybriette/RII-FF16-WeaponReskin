@@ -1,8 +1,8 @@
 ﻿using Reloaded.Mod.Interfaces;
 using IReloadedHooks = Reloaded.Hooks.ReloadedII.Interfaces.IReloadedHooks;
-using ff16.skins.clivesweapon.Configuration;
+using ff16.skins.weapon.Configuration;
 
-namespace ff16.skins.clivesweapon.Template;
+namespace ff16.skins.weapon.Template;
 
 /// <summary>
 /// Represents information passed in from the mod loader template to the implementing mod.

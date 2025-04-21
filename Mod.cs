@@ -1,13 +1,13 @@
 ﻿using Reloaded.Hooks.ReloadedII.Interfaces;
 using Reloaded.Mod.Interfaces;
-using ff16.skins.clivesweapon.Template;
-using ff16.skins.clivesweapon.Configuration;
+using ff16.skins.weapon.Template;
+using ff16.skins.weapon.Configuration;
 using ff16.utility.modloader.Interfaces;
 using System;
-using static ff16.skins.clivesweapon.Configuration.Config;
+using static ff16.skins.weapon.Configuration.Config;
 using System.IO;
 
-namespace ff16.skins.clivesweapon;
+namespace ff16.skins.weapon;
 
 public class Mod : ModBase
 {

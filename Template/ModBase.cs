@@ -1,6 +1,6 @@
-﻿using ff16.skins.clivesweapon.Configuration;
+﻿using ff16.skins.weapon.Configuration;
 
-namespace ff16.skins.clivesweapon.Template;
+namespace ff16.skins.weapon.Template;
 
 /// <summary>
 /// Base class for implementing mod functionality.
