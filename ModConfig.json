@@ -1,13 +1,13 @@
 {
-  "ModId": "ff16.skins.clivesweapon",
-  "ModName": "FFXVI Reskin Clives Weapon",
+  "ModId": "ff16.skins.weapon",
+  "ModName": "FFXVI Weapon Reskin",
   "ModAuthor": "Maybri",
-  "ModVersion": "2.4.0",
+  "ModVersion": "2.4.1",
   "ModDescription": "\u2022\u2022 Please use the \u0022Configure Mod\u0022 button for settings. \u2022\u2022  Reskin one of Clive\u0027s swords.  You can use the appearance of weapons that Clive hasn\u0027t or can never obtain.  Works even without Arete Stone appearance option unlocked.",
-  "ModDll": "ff16.skins.clivesweapon.dll",
+  "ModDll": "ff16.skins.weapon.dll",
   "ModIcon": "MainModPic.jpg",
-  "ModR2RManagedDll32": "x86/ff16.skins.clivesweapon.dll",
-  "ModR2RManagedDll64": "x64/ff16.skins.clivesweapon.dll",
+  "ModR2RManagedDll32": "x86/ff16.skins.weapon.dll",
+  "ModR2RManagedDll64": "x64/ff16.skins.weapon.dll",
   "ModNativeDll32": "",
   "ModNativeDll64": "",
   "Tags": [
@@ -16,7 +16,7 @@
   "CanUnload": false,
   "HasExports": false,
   "IsLibrary": false,
-  "ReleaseMetadataFileName": "ff16.skins.clivesweapon.ReleaseMetadata.json",
+  "ReleaseMetadataFileName": "ff16.skins.weapon.ReleaseMetadata.json",
   "PluginData": {
     "GitHubDependencies": {
       "IdToConfigMap": {
@@ -42,7 +42,7 @@
     },
     "GitHubRelease": {
       "UserName": "Maybriette",
-      "RepositoryName": "RII-FF16-ReskinClivesWeapon",
+      "RepositoryName": "RII-FF16-WeaponReskin",
       "UseReleaseTag": true,
       "AssetFileName": "Mod.zip"
     }
